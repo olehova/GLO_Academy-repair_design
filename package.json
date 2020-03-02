@@ -8,12 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github_greenone:olehova/GLO_Academy-repair_design.git"
+    "url": "git@github.com:olehova/GLO_Academy-repair_design.git"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
