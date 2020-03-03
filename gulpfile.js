@@ -23,7 +23,7 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
  
 gulp.task('cssmin',  (done) => {
-    gulp.src('./*.css')
+    gulp.src('css/*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min.css'}))
         .pipe(gulp.dest('dist'));
