@@ -12,7 +12,7 @@ function bs() {
   serveLesson15Sass();
   browserSync.init({
       server: {
-          baseDir: "./"
+          baseDir: "./lesson_15/src"
       }
   });
   watch("./src/*.html").on('change', browserSync.reload);
@@ -33,7 +33,7 @@ function serveSass() {
 function serveLesson15Sass() {
   return src("./lesson_15/src/sass/*.sass")
       .pipe(sass())
-      .pipe(dest("./dist/lesson_15/css"))
+      .pipe(dest("./lesson_15/src/css"))
       .pipe(browserSync.stream());
 }
 
