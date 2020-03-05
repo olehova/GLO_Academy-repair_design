@@ -9,7 +9,6 @@ const autoprefixer = require('gulp-autoprefixer');
 // Static server
 function bs() {
   serveSass();
-  serveLesson15Sass();
   browserSync.init({
       server: {
           baseDir: "./src"
@@ -17,8 +16,9 @@ function bs() {
   });
   watch("./src/*.html").on('change', browserSync.reload);
   watch("./src/sass/**/*.sass", serveSass);
+  // watch("./src/scss/**/*.scss", serveSass);
   watch("./js/*.js").on('change', browserSync.reload);
-  watch("./lesson_15/sass/**/*.sass", serveLesson15Sass);
+  // watch("./sass/**/*.sass", serveSass);
 }
 
 // Compile sass into CSS & auto-inject into browsers
@@ -33,8 +33,8 @@ function serveSass() {
 }
 
 // Compile sass into CSS & auto-inject into browsers
-function serveLesson15Sass() {
-  return src("./src/sass/*.sass")
+function serveSass() {
+  return src("./src/sass/**/*.sass", "./src/scss/**/*.scss")
       .pipe(sass())
       .pipe(dest("./src/css"))
       .pipe(browserSync.stream());
