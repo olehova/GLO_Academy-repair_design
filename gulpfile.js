@@ -4,7 +4,7 @@ const {src, dest, watch} = require('gulp');
 //import { src, dest, watch } from 'gulp';
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-
+const autoprefixer = require('gulp-autoprefixer');
 
 // Static server
 function bs() {
@@ -12,7 +12,7 @@ function bs() {
   serveLesson15Sass();
   browserSync.init({
       server: {
-          baseDir: "./lesson_15/src"
+          baseDir: "./src"
       }
   });
   watch("./src/*.html").on('change', browserSync.reload);
@@ -25,15 +25,18 @@ function bs() {
 function serveSass() {
   return src("./src/sass/*.sass")
       .pipe(sass())
+      .pipe(autoprefixer({
+        cascade: false
+      }))
       .pipe(dest("./src/css"))
       .pipe(browserSync.stream());
 }
 
 // Compile sass into CSS & auto-inject into browsers
 function serveLesson15Sass() {
-  return src("./lesson_15/src/sass/*.sass")
+  return src("./src/sass/*.sass")
       .pipe(sass())
-      .pipe(dest("./lesson_15/src/css"))
+      .pipe(dest("./src/css"))
       .pipe(browserSync.stream());
 }
 
