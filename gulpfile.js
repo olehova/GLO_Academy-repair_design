@@ -32,14 +32,6 @@ function serveSass() {
       .pipe(browserSync.stream());
 }
 
-// Compile sass into CSS & auto-inject into browsers
-function serveSass() {
-  return src("./src/sass/**/*.sass", "./src/scss/**/*.scss")
-      .pipe(sass())
-      .pipe(dest("./src/css"))
-      .pipe(browserSync.stream());
-}
-
 exports.serve = bs;
 
 // minify css using gulp
