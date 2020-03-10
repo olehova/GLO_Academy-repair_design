@@ -1,33 +1,49 @@
 .hero
   position: relative
   display: flex
-  flex-direction: column
-  justify-content: center
-  padding-top: 100px
-  background: $dark url('../img/hero-bg.jpg') no-repeat center /cover
+  padding-top: 84px
   height: 100vh
   color: $light
-  &::before
+  &::after
     content: ''
-    position: absolute
-    top: 0
-    left: 0
     width: 100%
-    height: 100%
-    background-color: rgba($dark, 0.7)
+    height: 3.46rem
+    position: absolute
+    bottom: 0
+    left: 0
+    background-color: $dark
   &__content
     position: relative
-    max-width: 47.85rem
-    margin-left: 4.28rem
-  &__text
-    font-size: 1.57rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    padding-left: 4.28rem
+    background: $dark url('../img/hero-bg.jpg') no-repeat center /cover
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba($dark, 0.7)
+  &__title
+    margin-bottom: 1rem
+    position: relative
     max-width: 500px
+  &__text
+    position: relative
+    font-size: 1.57rem
+    line-height: 131%
+    max-width: 500px
+    margin: 0
+    margin-bottom: 3rem
   &__button
+    position: relative
     margin-right: 20px
+    padding: 20px 25px
   &__instagram
-    position: absolute
-    left: 0
-    top: 0
     max-width: 80px
     height: 100%
   &__scroll-down
@@ -43,6 +59,7 @@
     text-transform: uppercase
     color: $light
     text-decoration: none
+    z-index: 9
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
@@ -66,6 +83,7 @@
     text-decoration: none
     transform: rotate(90deg)
     line-height: 0.8
+    font-size: 1.1rem
     &::after
       content: ''
       width: 50px
@@ -77,5 +95,6 @@
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
   font-size: 2.857rem
+  line-height: 1.4
   &--primary
     color: $primary
