@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
-  console.log(modalBtn); 
-
+  
   closeBtn.addEventListener('click', switchModal);
 });
