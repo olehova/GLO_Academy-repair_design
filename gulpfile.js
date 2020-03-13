@@ -17,7 +17,7 @@ function bs() {
   watch("./src/*.html").on('change', browserSync.reload);
   watch("./src/sass/**/*.sass", serveSass);
   watch("./src/scss/**/*.scss", serveSass);
-  watch("./js/*.js").on('change', browserSync.reload);
+  watch("./src/js/*.js").on('change', browserSync.reload);
   // watch("./sass/**/*.sass", serveSass);
 }
 
