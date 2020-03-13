@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+/*
 document.addEventListener("DOMContentLoaded", (event) => {
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -9,11 +10,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   };
 
   modalBtn.forEach(element => {
-    element.addEventListener('click', () => {
-      modal.classList.add('modal--visible');
-    });
+    element.addEventListener('click', switchModal)
   });
-  
+    
   closeBtn.addEventListener('click', switchModal);
 
   // modal.addEventListener('keydown', (ev) => {
@@ -21,4 +20,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //     switchModal();
   //   }
   // });
+});
+*/
+
+$(document).ready(function() {
+  const modal = $('.modal');
+  const modalBtn = $('[data-toggle=modal]');
+  const closeBtn = $('.modal__close');
+  modalBtn.on('click', () => {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', () => {
+    modal.toggleClass('modal--visible');
+  });
 });
