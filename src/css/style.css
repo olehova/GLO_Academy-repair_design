@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Futura Demi';
-  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff") format("woff");
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: wrap; }
@@ -422,6 +422,8 @@ img {
       text-transform: uppercase;
       text-height: 138%; }
       .section-title__heading--primary {
+        font-size: 1.93rem;
+        letter-spacing: -0.07em;
         color: #E3B873; }
     .section-title__word {
       display: flex;
@@ -464,8 +466,10 @@ img {
 .logo {
   color: #E3B873;
   text-transform: uppercase;
-  font-size: 1.075rem;
-  font-family: 'Future Demi'; }
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Futura Demi', sans-serif;
+  line-height: 1.143rem; }
 
 .nav__item {
   color: #fff;
@@ -526,7 +530,8 @@ img {
   .hero__button {
     position: relative;
     margin-right: 20px;
-    padding: 20px 25px; }
+    width: 14.785rem;
+    height: 3.64rem; }
   .hero__instagram {
     max-width: 80px;
     height: 100%; }
@@ -587,8 +592,7 @@ img {
   display: flex;
   flex-wrap: wrap; }
   .swiper-slide__text {
-    flex-basis: 50%;
-    margin-bottom: 2.42rem;
+    flex-basis: 33.34%;
     padding-bottom: 2rem; }
   .swiper-slide__heading {
     font-size: 1.285rem;
@@ -604,7 +608,7 @@ img {
     background-color: #fff; }
 
 .swiper-button-prev, .swiper-button-next {
-  bottom: 0;
+  bottom: 0px;
   top: auto;
   background-size: 42px;
   width: 42px;
