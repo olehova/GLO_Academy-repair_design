@@ -15,6 +15,7 @@
       margin-left: 0
 
 @media screen and ( max-width: 570px )
+  // header
   .contacts
     &__phone
       margin-right: 0
@@ -24,12 +25,16 @@
       display: none
   .title
     font-size: 1.64rem
+  
+  // hero-section
   .hero
+    padding-top: 3.7rem
     &__scroll-down
       display: none
-    &__content
+    &__title
       max-width: 22.86rem
     &__text
+      max-width: 22.86rem
       font-size: 1.29rem
       margin-bottom: 2.28rem
     &__button
@@ -39,17 +44,35 @@
   .row
     flex-direction: column
     align-items: center
+  
+  // projects-section
+  .col
+    &-50
+      width: 100% !important
+  .swiper
+    &__text
+      padding-bottom: 2.2rem
+    &-slide
+      &__text
+        margin-right: 3.57rem
+      &__img
+        margin-top: 4.3rem
+
+  // types-section
   .types
     &__card
       margin-bottom: 5rem
   .card
     &__text
       margin-left: 0
+  
+  // design-section
   .design
     background-color: $dark
     color: $light
     &__card
       margin-bottom: 5rem
+
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
