@@ -862,6 +862,37 @@ img {
     margin-right: 3.57rem; }
   .swiper-slide__img {
     margin-top: 4.3rem; }
+  .control {
+    background-color: #131313;
+    color: #fff; }
+    .control__input-group {
+      flex-basis: 100%;
+      margin-top: 2rem; }
+    .control__text {
+      margin-bottom: 2.86rem; }
+    .control__button {
+      width: 98%; }
+    .control__input::-webkit-input-placeholder {
+      color: #fff; }
+    .control__input::-moz-placeholder {
+      color: #fff; }
+    .control__input:-ms-input-placeholder {
+      color: #fff; }
+    .control__input::-ms-input-placeholder {
+      color: #fff; }
+    .control__input::placeholder {
+      color: #fff; }
+    .control__input-group::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      color: #fff;
+      background-color: #fff; }
+    .control__label {
+      padding-bottom: 0.72rem; }
+  .video__play {
+    width: 5rem;
+    height: 5rem; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {

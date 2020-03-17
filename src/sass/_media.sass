@@ -58,6 +58,33 @@
       &__img
         margin-top: 4.3rem
 
+  // control-section 
+  .control
+    background-color: $dark
+    color: $light
+    &__input-group
+      flex-basis: 100%
+      margin-top: 2rem
+    &__text
+      margin-bottom: 2.86rem
+    &__button
+      width: 98%
+    &__input
+      &::placeholder
+        color: $light
+      &-group
+        &::after
+          content: ''
+          height: 1px
+          width: 100%
+          color: $light
+          background-color: $light
+    &__label
+      padding-bottom: 0.72rem
+  .video
+    &__play
+      width: 5rem
+      height: 5rem
   // types-section
   .types
     &__card
