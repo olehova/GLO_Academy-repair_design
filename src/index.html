@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=03833490-9dd1-44ec-88c7-7af71ac4c53b&lang=ru_RU" type="text/javascript">
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -221,12 +223,12 @@
         </p>
         <!-- /.control__text -->
         <form action="" class="form control__form">
-          <div class="control__input-group">
+          <div class="control__input-group control__name">
             <label for="user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут">
           </div>
           <!-- /.input-group -->
-          <div class="control__input-group">
+          <div class="control__input-group control__phone">
             <label for="user-phone" class="label form__label control__label">Телефон</label>
             <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона">
           </div>
@@ -525,6 +527,25 @@
       <!-- /.form footer__form -->
     </div>
     <!-- /.footer-wrap -->
+
+    <div class="address footer__address">
+      <div class="address__text">
+        Ростов на дону, Торговый центр Plaza </br>
+        Прямой телефон +7 (999) 768 32 99
+      </div>
+      <!-- /.address__text -->
+      <div class="address__icons">
+        <a href="#" class="social-link"><img src="img/icon-email.svg" class="adress__image-icon"></a>
+        <a href="#" class="social-link"><img src="img/icon-instagram.svg" class="adress__image-icon"feat></a>
+      </div>
+      <!-- /.address__icons -->
+      <div class="map footer__map" id="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af67075f70f9a715a59da928413ae9f81a243967c31337a23f23b82f4ff35dc62&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>
+      </div>
+      <!-- /.map footer__map -->
+    </div>
+    <!-- /.footer_address -->
+
   </div>
   <!-- /.container -->
   <div class="footer__menu">

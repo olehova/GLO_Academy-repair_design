@@ -813,6 +813,33 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__address {
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: #E3B873;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .footer__map {
+    flex-basis: 75%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+
+.address__text {
+  flex-basis: 100%;
+  margin: auto; }
+
+.address__icons {
+  flex-basis: 100%;
+  margin-top: 1.428rem; }
+
+.address__image-icon {
+  margin-right: -0.357rem; }
 
 .modal {
   opacity: 0;
@@ -922,7 +949,8 @@ img {
     .control__text {
       margin-bottom: 2.86rem; }
     .control__button {
-      width: 98%; }
+      width: 98%;
+      order: 4; }
     .control__input::-webkit-input-placeholder {
       color: #fff; }
     .control__input::-moz-placeholder {
@@ -944,6 +972,12 @@ img {
         background-color: #fff; }
     .control__label {
       padding-bottom: 0.72rem; }
+    .control__name {
+      order: 1; }
+    .control__phone {
+      order: 2; }
+    .control__policy {
+      order: 3; }
   .video__play {
     width: 5rem;
     height: 5rem; }
@@ -983,8 +1017,21 @@ img {
       margin-bottom: 5rem; }
     .footer__button {
       width: 100%; }
+    .footer__map {
+      flex-basis: 95%;
+      order: 1;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
     .footer__menu {
-      display: none; } }
+      display: none; }
+  .address__text {
+    font-size: 18px;
+    line-height: 138.6%;
+    order: 2; }
+  .address__icons {
+    order: 3; }
+  .address__image-icon {
+    width: 39px;
+    height: 39px; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
