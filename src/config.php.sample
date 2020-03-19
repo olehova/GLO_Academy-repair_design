@@ -1,0 +1,3 @@
+<?php
+$outgoing_email= '';
+$outgoing_email_password = '';
