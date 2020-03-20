@@ -83,6 +83,22 @@ $(document).ready(function() {
         required: "Обязательно укажите email",
         email: "Введите в формате name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера:' + response);
+          alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса' + response);
+        }
+      });
     }
     });
 
@@ -105,6 +121,21 @@ $(document).ready(function() {
         },
         userPhone: "Телефон обязательно",
         userQuestion: "Задайте Ваш вопрос"
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            console.log('Ajax сработал. Ответ сервера:' + response);
+            alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+            $(form)[0].reset();
+          },
+          error: function (response) {
+            console.error('Ошибка запроса' + response);
+          }
+        });
       }
     });
 
@@ -125,6 +156,21 @@ $(document).ready(function() {
             minlength: "Имя не короче двух букв"
           },
           userPhone: "Телефон обязательно"
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(form).serialize(),
+            success: function (response) {
+              console.log('Ajax сработал. Ответ сервера:' + response);
+              alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
+              $(form)[0].reset();
+            },
+            error: function (response) {
+              console.error('Ошибка запроса' + response);
+            }
+          });
         }
   
   });
