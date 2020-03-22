@@ -71,6 +71,9 @@ $(document).ready(function() {
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true
       }
     },
     messages: {
@@ -82,7 +85,8 @@ $(document).ready(function() {
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате name@domain.com"
-      }
+      },
+      policyCheckbox: "Ваше согласие обязательно"
     },
     submitHandler: function(form) {
       $.ajax({
@@ -112,7 +116,10 @@ $(document).ready(function() {
           minlength: 2
         },
         userPhone: "required",
-        userQuestion: "required"
+        userQuestion: "required",
+        policyCheckbox: {
+          required: true
+        }
       },
       messages: {
         userName: {
@@ -120,7 +127,8 @@ $(document).ready(function() {
           minlength: "Имя не короче двух букв"
         },
         userPhone: "Телефон обязательно",
-        userQuestion: "Задайте Ваш вопрос"
+        userQuestion: "Задайте Ваш вопрос",
+        policyCheckbox: "Ваше согласие обязательно"
       },
       submitHandler: function(form) {
         $.ajax({
@@ -148,14 +156,18 @@ $(document).ready(function() {
             required: true,
             minlength: 2
           },
-          userPhone: "required"
+          userPhone: "required",
+          policyCheckbox: {
+            required: true
+          }
         },
         messages: {
           userName: {
             required: "Имя обязательно",
             minlength: "Имя не короче двух букв"
           },
-          userPhone: "Телефон обязательно"
+          userPhone: "Телефон обязательно",
+          policyCheckbox: "Ваше согласие обязательно"
         },
         submitHandler: function(form) {
           $.ajax({
