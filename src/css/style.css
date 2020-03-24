@@ -486,6 +486,9 @@ img {
   font-weight: 500;
   font-family: 'Futura Demi', sans-serif;
   line-height: 1.143rem; }
+  .logo--primary {
+    text-decoration: none;
+    color: #E3B873; }
 
 .nav__item {
   color: #fff;
@@ -772,6 +775,7 @@ img {
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
   background-color: #E3B873;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   color: #fff;
   padding: 1.214rem 2.6rem; }
 
@@ -816,7 +820,8 @@ img {
     padding: 1.285rem 4.785rem; }
   .footer__menu {
     background-color: #131313;
-    padding: 4.285rem 0; }
+    padding: 4.285rem 0;
+    position: relative; }
   .footer__address {
     margin: auto;
     margin-bottom: 2rem;
@@ -828,10 +833,40 @@ img {
     line-height: 2rem;
     text-align: center;
     text-transform: uppercase; }
+  .footer__scroll-up {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 10rem;
+    min-width: 17.6rem;
+    min-height: 6.92rem;
+    background-color: #131313;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9; }
+    .footer__scroll-up::after {
+      content: '';
+      background: url("../img/arrow-down.svg") no-repeat center;
+      transform: rotate(180deg);
+      width: 30px;
+      height: 30px;
+      border: 2px solid #E3B873;
+      border-radius: 50%;
+      margin-left: 12px; }
 
 .address__text {
   flex-basis: 100%;
   margin: auto; }
+  .address__text--phone {
+    color: #E3B873;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: normal; }
 
 .address__icons {
   flex-basis: 100%;
@@ -916,15 +951,27 @@ img {
     opacity: 1;
     visibility: visible; }
   .modal-thanks__dialog {
+    position: relative;
     margin: auto;
     margin-top: 20rem;
-    color: #fff; }
+    padding: 5rem 2rem;
+    max-width: 36.36rem;
+    color: #fff;
+    background-color: #131313; }
   .modal-thanks__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
     font-weight: normal;
-    text-align: center;
-    margin: auto; }
+    text-align: center; }
+  .modal-thanks__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    cursor: pointer; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -983,25 +1030,27 @@ img {
       width: 98%;
       order: 4;
       margin-top: 2rem; }
-    .control__input::-webkit-input-placeholder {
+    .control__input {
       color: #fff; }
-    .control__input::-moz-placeholder {
-      color: #fff; }
-    .control__input:-ms-input-placeholder {
-      color: #fff; }
-    .control__input::-ms-input-placeholder {
-      color: #fff; }
-    .control__input::placeholder {
-      color: #fff; }
-    .control__input-group {
-      flex-basis: 100%;
-      margin-top: 2rem; }
-      .control__input-group::after {
-        content: '';
-        height: 1px;
-        width: 100%;
-        color: #fff;
-        background-color: #fff; }
+      .control__input::-webkit-input-placeholder {
+        color: #fff; }
+      .control__input::-moz-placeholder {
+        color: #fff; }
+      .control__input:-ms-input-placeholder {
+        color: #fff; }
+      .control__input::-ms-input-placeholder {
+        color: #fff; }
+      .control__input::placeholder {
+        color: #fff; }
+      .control__input-group {
+        flex-basis: 100%;
+        margin-top: 2rem; }
+        .control__input-group::after {
+          content: '';
+          height: 1px;
+          width: 100%;
+          color: #fff;
+          background-color: #fff; }
     .control__label {
       padding-bottom: 0.72rem; }
     .control__name {

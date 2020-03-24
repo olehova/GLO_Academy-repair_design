@@ -25,16 +25,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 $(document).ready(function() {
   const modal = $('.modal');
-  const modal_thanks = $('.modal-thanks');
   const modalBtn = $('[data-toggle=modal]');
   const closeBtn = $('.modal__close');
+  const modalThanks = $('.modal-thanks');
+  const closeBtnThanks = $('.modal-thanks__close');
+  
   modalBtn.on('click', () => {
     modal.toggleClass('modal--visible');
   });
   closeBtn.on('click', () => {
     modal.toggleClass('modal--visible');
   });
-
+  closeBtnThanks.on('click', () => {
+    modalThanks.toggleClass('modal-thanks--visible');
+  });
   
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
@@ -63,24 +67,7 @@ $(document).ready(function() {
   );0
   wow.init();
     
-  // var wow = new WOW(
-  //   {
-  //     boxClass:     'wow',      // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
-  //     animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
-  //     offset:       0,          // расстояние в пикселях от нижнего края браузера до верхней границы элемента, необходимое для начала анимации (по умолчанию, 0)
-  //     mobile:       true,       // включение/отключение WOW.js на мобильных устройствах (по умолчанию, включено)
-  //     live:         true,       // поддержка асинхронно загруженных элементов (по умолчанию, включена)
-  //     callback:     function(box) {
-  //       // функция срабатывает каждый раз при старте анимации
-  //       // аргумент box — элемент, для которого была запущена анимация
-  //     },
-  //     scrollContainer: null // селектор прокручивающегося контейнера (опционально, по умолчанию, window)
-  //   }
-  // );
-  // wow.init();
-
-
-
+ 
   //Валидация формы
   
   $('.modal__form').validate({
@@ -122,7 +109,7 @@ $(document).ready(function() {
         success: function (response) {
           console.log('Ajax сработал. Ответ сервера:' + response);
 
-          modal_thanks.toggleClass('modal-thanks--visible');
+          modalThanks.toggleClass('modal-thanks--visible');
           //alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
           //$('#add--response').html('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button><strong>Well done!</strong> You successfully read this important alert message.</div>');
           //$('#result').html("<h2>demo created successfully!</h2>");
@@ -167,7 +154,7 @@ $(document).ready(function() {
           data: $(form).serialize(),
           success: function (response) {
             console.log('Ajax сработал. Ответ сервера:' + response);
-            modal_thanks.toggleClass('modal-thanks--visible');
+            modalThanks.toggleClass('modal-thanks--visible');
             // alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
             $(form)[0].reset();
           },
@@ -207,7 +194,7 @@ $(document).ready(function() {
             data: $(form).serialize(),
             success: function (response) {
               console.log('Ajax сработал. Ответ сервера:' + response);
-              modal_thanks.toggleClass('modal-thanks--visible');
+              modalThanks.toggleClass('modal-thanks--visible');
               // alert('Форма отправлена. Мы свяжемся с вами через 10 минут.');
               $(form)[0].reset();
             },

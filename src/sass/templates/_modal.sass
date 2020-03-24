@@ -69,12 +69,24 @@
     opacity: 1
     visibility: visible
   &__dialog
+    position: relative
     margin: auto
     margin-top: 20rem
+    padding: 5rem 2rem
+    max-width: 36.36rem
     color: $light
+    background-color: $dark
   &__title
     font-family: 'Yeseva One', cursive
     font-size: 1.357rem
     font-weight: normal
     text-align: center
-    margin: auto
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    width: 2rem
+    height: 2rem
+    background: transparent url('../img/close.svg') no-repeat center
+    border: none
+    cursor: pointer
