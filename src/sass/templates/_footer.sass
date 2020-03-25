@@ -2,7 +2,7 @@
   background: $dark url('../img/footer-bg.jpg') no-repeat center/cover
   padding-top: 3rem
   &__wrap
-    background-color: $black
+    background: $black url('../img/footer-bg-lines.png') no-repeat center/cover
     max-width: 63.07rem
     margin: auto
     margin-bottom: 3.714rem
@@ -49,7 +49,8 @@
     flex-wrap: wrap
     color: $primary
     font-family: 'Yeseva One', cursive
-    font-size: 20px
+    font-size: 1.4rem
+    font-weight: normal
     line-height: 2rem
     text-align: center
     text-transform: uppercase
@@ -81,7 +82,7 @@
   
 .address
   &__text
-    flex-basis: 100%
+    flex-basis: 40% 
     margin: auto
     &--phone
       color: $primary
@@ -98,3 +99,5 @@
     margin: auto
     margin-top: 2rem
     margin-bottom: 2rem
+    filter: grayscale(100%)
+    filter: gray
