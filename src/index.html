@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GLO_Academy-repair_design</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=03833490-9dd1-44ec-88c7-7af71ac4c53b&lang=ru_RU">
   </script>
@@ -17,6 +17,25 @@
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    ym(61347892, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script> <noscript>
+    <div><img src="https://mc.yandex.ru/watch/61347892" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="menu">
@@ -41,7 +60,7 @@
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
           <!-- /.phone contact__phone -->
-          <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+          <button onclick="ym('61347892','reachGoal','call'); return true;" class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
           <!-- /.button button-primary -->
         </div>
         <!-- /.contacts menu__contacts -->
@@ -65,17 +84,18 @@
           рабочего времени до 45 дней и 20% от
           стоимости материалов за счет организации работы</p>
         <div class="hero__buttons">
-          <button class="button hero__button button--primary wow fadeInRight" data-toggle="modal" data-wow-delay="0.5s">
+          <button onclick="ym('61347892','reachGoal','button'); return true;" class="button hero__button button--primary wow fadeInRight" data-toggle="modal" data-wow-delay="0.5s">
             Рассчитать стоимость
           </button>
-          <button class="button hero__button button--outline wow fadeInRight" data-toggle="modal" data-wow-delay="0.5s">
+          <button onclick="ym('61347892','reachGoal','button'); return true;" class="button hero__button button--outline wow fadeInRight" data-toggle="modal" data-wow-delay="0.5s">
             Отправить заявку
           </button>
         </div>
         <!-- /.hero__buttons -->
       </div>
       <!-- /.hero__content -->
-      <a href="#footer" class="hero__scroll-down wow bounce" data-wow-delay="4s" data-wow-iteration="2">листайте вниз</a>
+      <a href="#footer" class="hero__scroll-down wow bounce" data-wow-delay="4s" data-wow-iteration="2">листайте
+        вниз</a>
     </section>
     <!-- /.hero -->
 
@@ -215,7 +235,8 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
+        <div class="control__video video" id="player">
+          <script src="https://www.youtube.com/iframe_api"></script>
           <img src="img/play-icon.svg" alt="play-icon" class="video__play">
         </div>
         <!-- /.control__video video -->
@@ -240,11 +261,12 @@
               placeholder="Ваш номер телефона">
           </div>
           <!-- /.input-gpoup -->
-          <button class="button button--primary control__button">
+          <button onclick="ym('61347892','reachGoal','button'); return true;" class="button button--primary control__button">
             Отправить
           </button> <!-- /.button button-primary control__button -->
           <div class="policy control__policy">
-            <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked="checked">
+            <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox"
+              checked="checked">
             <label for="policy-checkbox" class="policy__label control__policy--label">я соглашаюсь с обработкой
               данных</label>
           </div>
@@ -533,7 +555,7 @@
               данных</label>
           </div>
           <!-- /.policy -->
-          <button class="button button--primary footer__button">
+          <button onclick="ym('61347892','reachGoal','button'); return true;" class="button button--primary footer__button">
             Отправить
           </button> <!-- /.button button-primary footer__button -->
         </form>
@@ -549,8 +571,10 @@
         </div>
         <!-- /.address__text -->
         <div class="address__icons">
-          <a href="mailto:example@example.com" class="social-link address__icons--first"><img src="img/icon-email.svg" class="adress__image-icon" alt="email"></a>
-          <a href="#" class="social-link"><img src="img/icon-instagram.svg" class="adress__image-icon" alt="instagram"></a>
+          <a href="mailto:example@example.com" class="social-link address__icons--first"><img src="img/icon-email.svg"
+              class="adress__image-icon" alt="email"></a>
+          <a href="#" class="social-link"><img src="img/icon-instagram.svg" class="adress__image-icon"
+              alt="instagram"></a>
         </div>
         <!-- /.address__icons -->
         <div class="map address__map" id="map">
@@ -559,7 +583,7 @@
           </script>
         </div>
         <!-- /.map footer__map -->
-        
+
       </div>
       <!-- /.footer_address -->
 
@@ -590,7 +614,7 @@
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
             <!-- /.phone contact__phone -->
-            <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+            <button onclick="ym('61347892','reachGoal','call'); return true;" class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
             <!-- /.button button-primary -->
           </div>
           <!-- /.contacts menu__contacts -->
@@ -651,7 +675,7 @@
   <!-- /.modal -->
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>

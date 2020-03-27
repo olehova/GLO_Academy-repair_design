@@ -209,6 +209,24 @@ $(document).ready(function() {
   // Маска для телефона
   $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "Ваш номер телефона"});
 
+  // Видео с ютуба
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '460',
+      width: '100%',
+      videoId: 'rNd9symkiIk',
+      events: {
+        'onReady': videoPlay,
+        //'onStateChange': onPlayerStateChange
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+
   // // Создание yandex  карты
   // ymaps.ready(init);
   //   function init(){

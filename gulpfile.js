@@ -45,7 +45,8 @@ function buildJS(done) {
   src(['./src/js/*.js','!./src/js/*.min.js'])
     .pipe(minify({ext: {
         min:'.js'
-      }
+      },
+      noSource: true
     }))
     .pipe(dest('dist/js'));
   src('./src/js/*.min.js')

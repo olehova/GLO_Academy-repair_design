@@ -436,7 +436,7 @@ img {
       font-family: 'Yeseva One', cursive;
       font-weight: normal;
       text-transform: uppercase;
-      text-height: 138%; }
+      line-height: 138%; }
       .section-title__heading--primary {
         font-size: 1.93rem;
         letter-spacing: -0.07em;
@@ -711,7 +711,8 @@ img {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -737,7 +738,7 @@ img {
     position: relative;
     text-align: center;
     font-size: 1.43rem;
-    font-height: 1.93rem;
+    line-height: 1.93rem;
     font-weight: normal;
     padding-bottom: 2.8rem; }
 
